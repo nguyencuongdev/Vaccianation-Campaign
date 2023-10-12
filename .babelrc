@@ -1,0 +1,13 @@
+{
+    "plugins": [
+        [
+            "module-resolver",
+            {
+                "alias": {
+                    "~": "./src" //cấu hình babel biên dịch ~ sang đường dẫn đến thư mục src
+                }
+            }
+        ]
+    ]
+}
+//cấu hình thư viện babel cho creat-react-app
