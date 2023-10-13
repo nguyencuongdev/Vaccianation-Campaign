@@ -1,0 +1,28 @@
+.campaign-item {
+    border: 1px solid var(--primary-color);
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 24px;
+}
+
+.campaign-link {
+    color: var(--text-color);
+    &:hover {
+        color: var(--text-color);
+        text-decoration: none;
+    }
+}
+.campaign-name {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.campaign-startdate,
+.campaign-organizer {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.campaign-startdate {
+    margin-left: 8px;
+}

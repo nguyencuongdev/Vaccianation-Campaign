@@ -1,0 +1,255 @@
+{
+    "campaignList": [
+        {
+            "id": 1,
+            "name": "Vaccination Compaign in Hang Day Statudium",
+            "organizer": "HDC",
+            "startDate": "2/7/2021",
+            "area": [
+                {
+                    "id": 1,
+                    "name": "South",
+                    "place": [
+                        {
+                            "id": 1,
+                            "name": "Line 1",
+                            "session": [
+                                "8h-9h30",
+                                "10h-11h",
+                                "11h30-15h30",
+                                "15h30-16h30,"
+                            ]
+                        },
+                        {
+                            "id": 1,
+                            "name": "Line 2",
+                            "session": [
+                                "8h-9h30",
+                                "10h-11h",
+                                "11h30-15h30",
+                                "15h30-16h30,"
+                            ]
+                        },
+                        {
+                            "id": 1,
+                            "name": "Line 3",
+                            "session": [
+                                "8h-9h30",
+                                "10h-11h",
+                                "11h30-15h30",
+                                "15h30-16h30,"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "North",
+                    "place": [
+                        {
+                            "id": 1,
+                            "name": "Line 1",
+                            "session": [
+                                "8h-9h30",
+                                "10h-11h",
+                                "11h30-15h30",
+                                "15h30-16h30,"
+                            ]
+                        },
+                        {
+                            "id": 1,
+                            "name": "Line 2",
+                            "session": [
+                                "8h-9h30",
+                                "10h-11h",
+                                "11h30-15h30",
+                                "15h30-16h30,"
+                            ]
+                        },
+                        {
+                            "id": 1,
+                            "name": "Line 3",
+                            "session": [
+                                "8h-9h30",
+                                "10h-11h",
+                                "11h30-15h30",
+                                "15h30-16h30,"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Vaccination Compaign in My Dinh National Statudium",
+            "organizer": "VDC",
+            "startDate": "2/7/2021",
+            "area": [
+                {
+                    "id": 1,
+                    "name": "South",
+                    "place": [
+                        {
+                            "id": 1,
+                            "name": "Line 1",
+                            "session": [
+                                "8h-9h30",
+                                "10h-11h",
+                                "11h30-15h30",
+                                "15h30-16h30,"
+                            ]
+                        },
+                        {
+                            "id": 1,
+                            "name": "Line 2",
+                            "session": [
+                                "8h-9h30",
+                                "10h-11h",
+                                "11h30-15h30",
+                                "15h30-16h30,"
+                            ]
+                        },
+                        {
+                            "id": 1,
+                            "name": "Line 3",
+                            "session": [
+                                "8h-9h30",
+                                "10h-11h",
+                                "11h30-15h30",
+                                "15h30-16h30,"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "North",
+                    "place": [
+                        {
+                            "id": 1,
+                            "name": "Line 1",
+                            "session": [
+                                "8h-9h30",
+                                "10h-11h",
+                                "11h30-15h30",
+                                "15h30-16h30,"
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Line 2",
+                            "session": [
+                                "8h-9h30",
+                                "10h-11h",
+                                "11h30-15h30",
+                                "15h30-16h30,"
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "name": "Line 3",
+                            "session": [
+                                "8h-9h30",
+                                "10h-11h",
+                                "11h30-15h30",
+                                "15h30-16h30,"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Vaccination Compaign in Hang Day Statudium",
+            "organizer": "HDC",
+            "startDate": "2/7/2021",
+            "area": [
+                {
+                    "id": 1,
+                    "name": "South",
+                    "place": [
+                        {
+                            "id": 1,
+                            "name": "Line 1",
+                            "session": [
+                                "8h-9h30",
+                                "10h-11h",
+                                "11h30-15h30",
+                                "15h30-16h30,"
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Line 2",
+                            "session": [
+                                "8h-9h30",
+                                "10h-11h",
+                                "11h30-15h30",
+                                "15h30-16h30,"
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "name": "Line 3",
+                            "session": [
+                                "8h-9h30",
+                                "10h-11h",
+                                "11h30-15h30",
+                                "15h30-16h30,"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "North",
+                    "place": [
+                        {
+                            "id": 1,
+                            "name": "Line 1",
+                            "session": [
+                                "8h-9h30",
+                                "10h-11h",
+                                "11h30-15h30",
+                                "15h30-16h30,"
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Line 2",
+                            "session": [
+                                "8h-9h30",
+                                "10h-11h",
+                                "11h30-15h30",
+                                "15h30-16h30,"
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "name": "Line 3",
+                            "session": [
+                                "8h-9h30",
+                                "10h-11h",
+                                "11h30-15h30",
+                                "15h30-16h30,"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "campainUserRegisted": [],
+    "users": [
+        {
+            "fullName": "Nguyen",
+            "lastName": "Cuong",
+            "username": "cuong123",
+            "registrationCode": "123",
+            "email": "cuong@gmail.com",
+            "sdt": "12345678"
+        }
+    ]
+}

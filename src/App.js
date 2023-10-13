@@ -1,24 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Fragment, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+
+import { CompressionSevice } from '~/services';
+import { campaignListActions } from '~/components/CampaignList/CampaignListSlice';
+import { routers } from '~/routers';
+import { DefaultLayout } from '~/layouts';
+import { GlobalStyle } from '~/components';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const handleGetCompaignList = async () => {
+      const data = await CompressionSevice.getCompaignListService();
+      dispatch(campaignListActions.storeCampaigns(data));
+    }
+    handleGetCompaignList();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <GlobalStyle>
+        <div className="App">
+          <Routes>
+            {routers.map((router, index) => {
+              let Layout = DefaultLayout;
+
+              if (router.layout)
+                Layout = router.layout;
+              else if (router.layout === null)
+                Layout = Fragment;
+
+              const Page = router?.component;
+              return (
+                <Route key={index} path={router?.path}
+                  element={
+                    <Layout>
+                      <Page />
+                    </Layout>
+                  }
+                />)
+            })}
+          </Routes>
+        </div>
+      </GlobalStyle>
+    </BrowserRouter>
   );
 }
 

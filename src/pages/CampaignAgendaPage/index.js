@@ -1,0 +1,1 @@
+export { default as CampaignAgendaPage } from './CampaignAgenda';
