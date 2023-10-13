@@ -1,1 +1,1 @@
-export * as CompressionSevice from './compaignListService';
+export * as CampaignSevice from './campaignService';

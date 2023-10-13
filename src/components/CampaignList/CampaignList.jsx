@@ -14,8 +14,9 @@ function CampaignList() {
                 return (
                     <CampaignItem key={campaigItem.id}
                         name={campaigItem?.name}
-                        oranizer={campaigItem?.oranizer}
+                        organizer={campaigItem?.organizer}
                         startDate={campaigItem?.startDate}
+                        to={`/campaign/${campaigItem?.id}`}
                     />
                 );
             })}

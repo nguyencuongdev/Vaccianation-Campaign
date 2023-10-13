@@ -4,7 +4,7 @@ import { Fragment, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
-import { CompressionSevice } from '~/services';
+import { CampaignSevice } from '~/services';
 import { campaignListActions } from '~/components/CampaignList/CampaignListSlice';
 import { routers } from '~/routers';
 import { DefaultLayout } from '~/layouts';
@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     const handleGetCompaignList = async () => {
-      const data = await CompressionSevice.getCompaignListService();
+      const data = await CampaignSevice.getCampaignListService();
       dispatch(campaignListActions.storeCampaigns(data));
     }
     handleGetCompaignList();

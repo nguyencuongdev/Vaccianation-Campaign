@@ -1,0 +1,61 @@
+.campaign-agenda-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+.campaign-agenda-name {
+    color: var(--primary-color);
+    font-size: 3.2rem;
+}
+
+.campaign-agenda-btn-register {
+    background-color: #22c55e;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 1.6rem;
+    border-radius: 4px;
+}
+.campaign-agenda-infor {
+    margin-top: 20px;
+}
+.campaign-agenda-infor-title {
+    display: grid;
+    grid-template-columns: 20% 20% 1fr;
+    column-gap: 8px;
+}
+
+.campaign-agenda-title-item {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.campaign-agenda-detail-item {
+    padding: 12px 0;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+.campaign-agenda-place-item,
+.campaign-agenda-detail-item {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    column-gap: 8px;
+    margin-bottom: 8px;
+}
+
+.campaign-agenda-times {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 8px;
+}
+
+.campaign-agenda-times-item {
+    font-size: 1.6rem;
+    border: 2px solid transparent;
+    padding: 4px 6px;
+}
+
+.campaign-agenda-times-item.active {
+    border-color: #22c55e;
+}
