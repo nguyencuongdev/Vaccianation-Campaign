@@ -1,0 +1,1 @@
+export { default as VaccineRegistration } from './VaccineRegistration';

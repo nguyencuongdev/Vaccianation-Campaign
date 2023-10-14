@@ -7,7 +7,7 @@ const cx = classnames.bind(styles);
 
 function CampaignAgeda() {
     const [campaignState, setCompaignState] = useState(null);
-    const areaList = campaignState?.area;
+    const areaList = campaignState?.areas ?? [];
     let pathName = window.location.pathname.split('/');
     if (pathName[pathName.length - 1] === '') pathName.pop();
     let campaignId = pathName[pathName.length - 1];
@@ -15,7 +15,6 @@ function CampaignAgeda() {
     useEffect(() => {
         const getCampaignAgendaInfor = async (id) => {
             const data = await CampaignSevice.getCampaignAgendaInforService('/campaignList/' + id);
-            console.log(data);
             setCompaignState(data);
         }
         getCampaignAgendaInfor(campaignId);
@@ -44,21 +43,21 @@ function CampaignAgeda() {
                                     <div className={cx('campaign-agenda-detail-item')}>
                                         <h4 className={cx('campaign-agenda-area')}>{area?.name}</h4>
                                         <div className={cx('campaign-agenda-places')}>
-                                            {area?.place.length > 0 &&
-                                                area?.place.map((item) =>
+                                            {area?.places.length > 0 &&
+                                                area?.places.map((item, index) =>
                                                     <div className={cx("campaign-agenda-place-item")}
-                                                        key={item?.id}
+                                                        key={index}
                                                     >
                                                         <h4 className={cx('campaign-agenda-place')}>
                                                             {item.name}
                                                         </h4>
                                                         <div className={cx('campaign-agenda-times')}>
-                                                            {item?.session.length > 0 &&
-                                                                item?.session.map((time, index) =>
+                                                            {item?.sessions.length > 0 &&
+                                                                item?.sessions.map((session, index) =>
                                                                     <span key={index}
-                                                                        className={cx('campaign-agenda-times-item', 'active')}
+                                                                        className={cx('campaign-agenda-times-item')}
                                                                     >
-                                                                        {time}
+                                                                        {session.time}
                                                                     </span>
                                                                 )
                                                             }

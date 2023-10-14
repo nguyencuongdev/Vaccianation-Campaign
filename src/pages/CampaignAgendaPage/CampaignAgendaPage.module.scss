@@ -35,13 +35,20 @@
     border-top: 2px solid #000;
     border-bottom: 2px solid #000;
 }
-
+.campaign-agenda-place {
+    display: flex;
+    align-items: center;
+}
 .campaign-agenda-place-item,
 .campaign-agenda-detail-item {
     display: grid;
     grid-template-columns: 20% 1fr;
     column-gap: 8px;
     margin-bottom: 8px;
+}
+
+.campaign-agenda-place-item {
+    grid-template-columns: 25% 1fr;
 }
 
 .campaign-agenda-times {
@@ -54,6 +61,7 @@
     font-size: 1.6rem;
     border: 2px solid transparent;
     padding: 4px 6px;
+    cursor: pointer;
 }
 
 .campaign-agenda-times-item.active {
