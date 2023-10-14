@@ -123,36 +123,38 @@
                     ]
                 }
             ],
+            "services": [
+                {
+                    "id": 1,
+                    "name": "Designiing shills path",
+                    "price": 20
+                },
+                {
+                    "id": 2,
+                    "name": "Education ecosystem",
+                    "price": 10
+                },
+                {
+                    "id": 2,
+                    "name": "Trainng and movat",
+                    "price": 30
+                }
+            ],
             "tickets": [
                 {
                     "id": 1,
                     "price": 210,
-                    "type": "Normal Ticket",
-                    "services": [
-                        "Designiing shills path",
-                        "Education ecosystem",
-                        "Trainng and movat"
-                    ]
+                    "type": "Normal Ticket"
                 },
                 {
                     "id": 2,
                     "price": 230,
-                    "type": "Early Bird",
-                    "services": [
-                        "Designiing shills path",
-                        "Education ecosystem",
-                        "Trainng and movat"
-                    ]
+                    "type": "Early Bird"
                 },
                 {
                     "id": 3,
                     "price": 300,
-                    "type": "Hotel Package",
-                    "services": [
-                        "Designiing shills path",
-                        "Education ecosystem",
-                        "Trainng and movat"
-                    ]
+                    "type": "Hotel Package"
                 }
             ]
         }

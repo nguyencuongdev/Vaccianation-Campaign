@@ -16,6 +16,9 @@
     padding: 12px;
     font-size: 1.6rem;
     border-radius: 4px;
+    &:hover {
+        background-color: #168840;
+    }
 }
 .campaign-agenda-infor {
     margin-top: 20px;

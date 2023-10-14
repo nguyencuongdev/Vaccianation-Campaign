@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import classnames from 'classnames/bind';
 import styles from './CampaignAgendaPage.module.scss';
 import { CampaignSevice } from '~/services';
+import { VaccineRegistration } from '~/components';
 const cx = classnames.bind(styles);
 
 
@@ -21,12 +22,17 @@ function CampaignAgeda() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [campaignId]);
 
+    const campaignRegisterRef = useRef(null);
+    const handleShowFormCampaignRegistration = () => campaignRegisterRef.current.showFormRegistration();
+
     return (
         <div className={cx('campaign-agenda', 'row')}>
             <div className={cx('col', 'px-0')}>
                 <div className={cx('campaign-agenda-title')}>
                     <h2 className={cx('campaign-agenda-name')}>{campaignState?.name}</h2>
-                    <button className={cx('campaign-agenda-btn', 'campaign-agenda-btn-register')}>
+                    <button className={cx('campaign-agenda-btn', 'campaign-agenda-btn-register')}
+                        onClick={handleShowFormCampaignRegistration}
+                    >
                         Register for this Campaign
                     </button>
                 </div>
@@ -71,6 +77,11 @@ function CampaignAgeda() {
                             )
                         })}
                 </div>
+                {/* form registration campagin */}
+                <VaccineRegistration ref={campaignRegisterRef}
+                    tickets={campaignState?.tickets}
+                    services={campaignState?.services}
+                />
             </div>
         </div>
     );
