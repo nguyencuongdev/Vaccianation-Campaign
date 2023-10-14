@@ -12,3 +12,12 @@ export const get = async (url, options = {}) => {
         console.log(err);
     }
 }
+
+export const post = async (url, data, options = {}) => {
+    try {
+        const res = await request.post(url, data, options);
+        return res.data;
+    } catch (err) {
+        console.log(err);
+    }
+}

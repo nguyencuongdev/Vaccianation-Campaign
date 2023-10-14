@@ -1,12 +1,13 @@
 import classnames from 'classnames/bind';
 import { forwardRef, useImperativeHandle, useRef, useState } from 'react';
+import { CampaignSevice } from '~/services';
 import styles from './VaccineRegistration.module.scss';
 
 const cx = classnames.bind(styles);
 const VaccineRegistration = forwardRef(
-    ({ tickets, services }, ref) => {
+    ({ tickets, services, name, id }, ref) => {
         const vaccnieRegisterRef = useRef(null);
-        const [ticketType, setTicketType] = useState(null);
+        const [ticketType, setTicketType] = useState('');
         const [serviesType, setServiesType] = useState([]);
         const [totalCostValue, setTotalCostValue] = useState(0);
         const [addServiceCostValue, setAddServiceCostValue] = useState(0);
@@ -24,7 +25,7 @@ const VaccineRegistration = forwardRef(
             const element = e.target;
             let elementParrent = element.parentElement;
             if (!element.checked) {
-                setTicketType(null);
+                setTicketType('');
                 setTotalRootCostValue(0);
                 setTotalCostValue(addServiceCostValue);
                 return;
@@ -34,25 +35,49 @@ const VaccineRegistration = forwardRef(
 
             const type = elementParrent.querySelector(`.${cx('ticket-title-name')}`).innerText;
             const price = +elementParrent.querySelector(`.${cx('ticket-price')}`).innerText;
-            setTicketType({ price, type });
+            setTicketType(type);
             setTotalRootCostValue(price);
             setTotalCostValue(addServiceCostValue + price);
         }
 
-        function handleChooseServiesAdd(e) {
+        function handleServiesAdd(e) {
             e.stopPropagation();
             const element = e.target;
             let elementParrent = element.parentElement;
             while (!elementParrent.classList.contains(cx('services-item')))
                 elementParrent = elementParrent.parentElement;
-
             const name = elementParrent.querySelector(`.${cx('workshop')}`).innerText;
             const price = +elementParrent.getAttribute('data-price');
-            setServiesType((prev) => {
-                return [...prev, { name, price }]
-            })
+            if (!element.checked) {
+                setServiesType((prev) => prev?.filter((item) => item?.name !== name));
+                setAddServiceCostValue((prev) => prev - price);
+                setTotalCostValue((prev) => prev - price);
+                return;
+            }
+            setServiesType((prev) => [...prev, name]);
             setAddServiceCostValue((prev) => prev + price);
-            setTotalCostValue(addServiceCostValue + totalRootCostValue);
+            setTotalCostValue((prev) => prev + price);
+        }
+
+        function handleRegistrationCampaign(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (ticketType) {
+                const data = {
+                    name,
+                    ticketType,
+                    total: totalCostValue,
+                    servicesAdd: serviesType,
+                    createAt: new Date(),
+                    idUser: 1,
+                    // idCampaign: id,
+                    id: id,
+                }
+                CampaignSevice.registrattionCampaignService('/campainsUserRegisted', data);
+                alert('Đăng ký chiến dịch thành công!');
+                window.location.reload();
+                vaccnieRegisterRef.current.style.display = 'none';
+            }
         }
 
         return (
@@ -61,7 +86,7 @@ const VaccineRegistration = forwardRef(
                 <div className={cx('overlay')}
                     onClick={() => vaccnieRegisterRef.current.style.display = 'none'}
                 ></div>
-                <form className={cx('form-vaccnie-resgister')}>
+                <form className={cx('form-vaccnie-resgister')} onSubmit={handleRegistrationCampaign}>
                     <h2 className={cx('title')}>Vacciantion Campaign 2021</h2>
                     <div className={cx('tickets')}>
                         {tickets?.length > 0 &&
@@ -69,7 +94,7 @@ const VaccineRegistration = forwardRef(
                                 <div className={cx('ticket')} key={index}>
                                     <div className={cx('ticket-title')}>
                                         <input type='checkbox' className={cx('ticket-choose')}
-                                            checked={ticketType?.type === ticket?.type}
+                                            checked={ticketType === ticket?.type}
                                             onChange={handleChooseTicketType}
                                         />
                                         <h4 className={cx('ticket-title-name')}>{ticket?.type}</h4>
@@ -90,8 +115,7 @@ const VaccineRegistration = forwardRef(
                                         data-price={service?.price}
                                     >
                                         <input type='checkbox' className={cx('services-choose')}
-                                            onChange={handleChooseServiesAdd}
-                                        // checked={serviesType.includes(service?.name)}
+                                            onChange={handleServiesAdd}
                                         />
                                         <h5 className={cx('services-item-name', 'workshop')}>
                                             {service?.name}
@@ -124,7 +148,9 @@ const VaccineRegistration = forwardRef(
                         </div>
                     </div>
                     <div className={cx('button-container')}>
-                        <button className={cx('button-furchase')} id='purchase'>Purchase</button>
+                        <button className={cx('button-furchase', {
+                            'active': ticketType
+                        })} id='purchase'>Purchase</button>
                     </div>
                 </form>
             </div>

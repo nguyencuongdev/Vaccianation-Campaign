@@ -1,173 +1,345 @@
 {
-    "campaignList": [
+  "campaignList": [
+    {
+      "id": 1,
+      "name": "Vaccination Compaign in Hang Day Statudium",
+      "organizer": "HDC",
+      "startDate": "2/7/2021",
+      "areas": [
         {
-            "id": 1,
-            "name": "Vaccination Compaign in Hang Day Statudium",
-            "organizer": "HDC",
-            "startDate": "2/7/2021",
-            "areas": [
+          "id": 1,
+          "name": "South",
+          "places": [
+            {
+              "id": 1,
+              "name": "Line 1",
+              "sessions": [
                 {
-                    "id": 1,
-                    "name": "South",
-                    "places": [
-                        {
-                            "id": 1,
-                            "name": "Line 1",
-                            "sessions": [
-                                {
-                                    "id": 1,
-                                    "type": "Normal",
-                                    "time": "8h-9h30"
-                                },
-                                {
-                                    "id": 2,
-                                    "type": "Normal",
-                                    "time": "10h-11h"
-                                },
-                                {
-                                    "id": 3,
-                                    "type": "Normal",
-                                    "time": "11h30-15h30"
-                                },
-                                {
-                                    "id": 4,
-                                    "type": "Normal",
-                                    "time": "15h30-16h30"
-                                }
-                            ]
-                        }
-                    ]
+                  "id": 1,
+                  "type": "Normal Ticket",
+                  "time": "8h-9h30"
                 },
                 {
-                    "id": 2,
-                    "name": "North",
-                    "places": [
-                        {
-                            "id": 1,
-                            "name": "Line 1",
-                            "sessions": [
-                                {
-                                    "id": 1,
-                                    "type": "Normal",
-                                    "time": "8h-9h30"
-                                },
-                                {
-                                    "id": 2,
-                                    "type": "Normal",
-                                    "time": "10h-11h"
-                                },
-                                {
-                                    "id": 3,
-                                    "type": "Normal",
-                                    "time": "11h30-15h30"
-                                },
-                                {
-                                    "id": 4,
-                                    "type": "Normal",
-                                    "time": "15h30-16h30"
-                                }
-                            ]
-                        },
-                        {
-                            "id": 2,
-                            "name": "Line 2",
-                            "sessions": [
-                                {
-                                    "id": 1,
-                                    "type": "Normal",
-                                    "time": "8h-9h30"
-                                },
-                                {
-                                    "id": 2,
-                                    "type": "Normal",
-                                    "time": "10h-11h"
-                                },
-                                {
-                                    "id": 3,
-                                    "type": "Normal",
-                                    "time": "11h30-15h30"
-                                },
-                                {
-                                    "id": 4,
-                                    "type": "Normal",
-                                    "time": "15h30-16h30"
-                                }
-                            ]
-                        },
-                        {
-                            "id": 3,
-                            "name": "Line 3",
-                            "sessions": [
-                                {
-                                    "id": 1,
-                                    "type": "Normal",
-                                    "time": "8h-9h30"
-                                },
-                                {
-                                    "id": 2,
-                                    "type": "Normal",
-                                    "time": "10h-11h"
-                                },
-                                {
-                                    "id": 3,
-                                    "type": "Normal",
-                                    "time": "11h30-15h30"
-                                },
-                                {
-                                    "id": 4,
-                                    "type": "Normal",
-                                    "time": "15h30-16h30"
-                                }
-                            ]
-                        }
-                    ]
+                  "id": 2,
+                  "type": "Normal Ticket",
+                  "time": "10h-11h"
+                },
+                {
+                  "id": 3,
+                  "type": "Normal Ticket",
+                  "time": "11h30-15h30"
+                },
+                {
+                  "id": 4,
+                  "type": "Normal Ticket",
+                  "time": "15h30-16h30"
                 }
-            ],
-            "services": [
-                {
-                    "id": 1,
-                    "name": "Designiing shills path",
-                    "price": 20
-                },
-                {
-                    "id": 2,
-                    "name": "Education ecosystem",
-                    "price": 10
-                },
-                {
-                    "id": 2,
-                    "name": "Trainng and movat",
-                    "price": 30
-                }
-            ],
-            "tickets": [
-                {
-                    "id": 1,
-                    "price": 210,
-                    "type": "Normal Ticket"
-                },
-                {
-                    "id": 2,
-                    "price": 230,
-                    "type": "Early Bird"
-                },
-                {
-                    "id": 3,
-                    "price": 300,
-                    "type": "Hotel Package"
-                }
-            ]
-        }
-    ],
-    "campainUserRegisted": [],
-    "users": [
+              ]
+            }
+          ]
+        },
         {
-            "fullName": "Nguyen",
-            "lastName": "Cuong",
-            "username": "cuong123",
-            "registrationCode": "123",
-            "email": "cuong@gmail.com",
-            "sdt": "12345678"
+          "id": 2,
+          "name": "North",
+          "places": [
+            {
+              "id": 1,
+              "name": "Line 1",
+              "sessions": [
+                {
+                  "id": 1,
+                  "type": "Normal Ticket",
+                  "time": "8h-9h30"
+                },
+                {
+                  "id": 2,
+                  "type": "Early Bird",
+                  "time": "10h-11h"
+                },
+                {
+                  "id": 3,
+                  "type": "Normal Ticket",
+                  "time": "11h30-15h30"
+                },
+                {
+                  "id": 4,
+                  "type": "Normal Ticket",
+                  "time": "15h30-16h30"
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "name": "Line 2",
+              "sessions": [
+                {
+                  "id": 1,
+                  "type": "Normal",
+                  "time": "8h-9h30"
+                },
+                {
+                  "id": 2,
+                  "type": "Early Bird",
+                  "time": "10h-11h"
+                },
+                {
+                  "id": 3,
+                  "type": "Normal",
+                  "time": "11h30-15h30"
+                },
+                {
+                  "id": 4,
+                  "type": "Hotel Package",
+                  "time": "15h30-16h30"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "name": "Line 3",
+              "sessions": [
+                {
+                  "id": 1,
+                  "type": "Early Bird",
+                  "time": "8h-9h30"
+                },
+                {
+                  "id": 2,
+                  "type": "Normal",
+                  "time": "10h-11h"
+                },
+                {
+                  "id": 3,
+                  "type": "Early Bird",
+                  "time": "11h30-15h30"
+                },
+                {
+                  "id": 4,
+                  "type": "Hotel Package",
+                  "time": "15h30-16h30"
+                }
+              ]
+            }
+          ]
         }
-    ]
+      ],
+      "services": [
+        {
+          "id": 1,
+          "name": "Designiing shills path",
+          "price": 20
+        },
+        {
+          "id": 2,
+          "name": "Education ecosystem",
+          "price": 10
+        },
+        {
+          "id": 2,
+          "name": "Trainng and movat",
+          "price": 30
+        }
+      ],
+      "tickets": [
+        {
+          "id": 1,
+          "price": 210,
+          "type": "Normal Ticket"
+        },
+        {
+          "id": 2,
+          "price": 230,
+          "type": "Early Bird"
+        },
+        {
+          "id": 3,
+          "price": 300,
+          "type": "Hotel Package"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Vaccination Compaign in My Dinh Statudium",
+      "organizer": "VDC",
+      "startDate": "8/7/2021",
+      "areas": [
+        {
+          "id": 1,
+          "name": "South",
+          "places": [
+            {
+              "id": 1,
+              "name": "Line 1",
+              "sessions": [
+                {
+                  "id": 1,
+                  "type": "Normal Ticket",
+                  "time": "8h-9h30"
+                },
+                {
+                  "id": 2,
+                  "type": "Normal Ticket",
+                  "time": "10h-11h"
+                },
+                {
+                  "id": 3,
+                  "type": "Normal Ticket",
+                  "time": "11h30-15h30"
+                },
+                {
+                  "id": 4,
+                  "type": "Normal Ticket",
+                  "time": "15h30-16h30"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "North",
+          "places": [
+            {
+              "id": 1,
+              "name": "Line 1",
+              "sessions": [
+                {
+                  "id": 1,
+                  "type": "Normal Ticket",
+                  "time": "8h-9h30"
+                },
+                {
+                  "id": 2,
+                  "type": "Early Bird",
+                  "time": "10h-11h"
+                },
+                {
+                  "id": 3,
+                  "type": "Normal Ticket",
+                  "time": "11h30-15h30"
+                },
+                {
+                  "id": 4,
+                  "type": "Normal Ticket",
+                  "time": "15h30-16h30"
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "name": "Line 2",
+              "sessions": [
+                {
+                  "id": 1,
+                  "type": "Normal",
+                  "time": "8h-9h30"
+                },
+                {
+                  "id": 2,
+                  "type": "Early Bird",
+                  "time": "10h-11h"
+                },
+                {
+                  "id": 3,
+                  "type": "Normal",
+                  "time": "11h30-15h30"
+                },
+                {
+                  "id": 4,
+                  "type": "Hotel Package",
+                  "time": "15h30-16h30"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "name": "Line 3",
+              "sessions": [
+                {
+                  "id": 1,
+                  "type": "Early Bird",
+                  "time": "8h-9h30"
+                },
+                {
+                  "id": 2,
+                  "type": "Normal",
+                  "time": "10h-11h"
+                },
+                {
+                  "id": 3,
+                  "type": "Early Bird",
+                  "time": "11h30-15h30"
+                },
+                {
+                  "id": 4,
+                  "type": "Hotel Package",
+                  "time": "15h30-16h30"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "id": 1,
+          "name": "Designiing shills path",
+          "price": 20
+        },
+        {
+          "id": 2,
+          "name": "Education ecosystem",
+          "price": 10
+        },
+        {
+          "id": 2,
+          "name": "Trainng and movat",
+          "price": 30
+        }
+      ],
+      "tickets": [
+        {
+          "id": 1,
+          "price": 210,
+          "type": "Normal Ticket"
+        },
+        {
+          "id": 2,
+          "price": 230,
+          "type": "Early Bird"
+        },
+        {
+          "id": 3,
+          "price": 300,
+          "type": "Hotel Package"
+        }
+      ]
+    }
+  ],
+  "campainsUserRegisted": [
+    {
+      "name": "Vaccination Compaign in Hang Day Statudium",
+      "ticketType": "Hotel Package",
+      "total": 360,
+      "servicesAdd": [
+        "Education ecosystem",
+        "Designiing shills path",
+        "Trainng and movat"
+      ],
+      "createAt": "2023-10-14T15:27:40.178Z",
+      "idUser": 1,
+      "id": 1
+    }
+  ],
+  "users": [
+    {
+      "fullName": "Nguyen",
+      "lastName": "Cuong",
+      "username": "cuong123",
+      "registrationCode": "123",
+      "email": "cuong@gmail.com",
+      "sdt": "12345678"
+    }
+  ]
 }

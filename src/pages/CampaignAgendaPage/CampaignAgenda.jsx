@@ -8,6 +8,8 @@ const cx = classnames.bind(styles);
 
 function CampaignAgeda() {
     const [campaignState, setCompaignState] = useState(null);
+    const [checkCampaignRegisted, setCheckCampaignRegisted] = useState(false);
+    const [inforCampaignIfRegisted, setInforCampaignIfRegisted] = useState(null);
     const areaList = campaignState?.areas ?? [];
     let pathName = window.location.pathname.split('/');
     if (pathName[pathName.length - 1] === '') pathName.pop();
@@ -22,6 +24,19 @@ function CampaignAgeda() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [campaignId]);
 
+    useEffect(() => {
+        const getCampaignInforIfRegisted = async (id) => {
+            const data = await CampaignSevice.getCampaignUserRegistedService('/campainsUserRegisted/' + id);
+            if (data) {
+                setCheckCampaignRegisted(true);
+                setInforCampaignIfRegisted(data);
+            }
+        }
+        getCampaignInforIfRegisted(campaignId);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [campaignId]);
+
+
     const campaignRegisterRef = useRef(null);
     const handleShowFormCampaignRegistration = () => campaignRegisterRef.current.showFormRegistration();
 
@@ -30,11 +45,19 @@ function CampaignAgeda() {
             <div className={cx('col', 'px-0')}>
                 <div className={cx('campaign-agenda-title')}>
                     <h2 className={cx('campaign-agenda-name')}>{campaignState?.name}</h2>
-                    <button className={cx('campaign-agenda-btn', 'campaign-agenda-btn-register')}
-                        onClick={handleShowFormCampaignRegistration}
-                    >
-                        Register for this Campaign
-                    </button>
+                    {!checkCampaignRegisted &&
+                        <button className={cx('campaign-agenda-btn', 'campaign-agenda-btn-register')}
+                            onClick={handleShowFormCampaignRegistration}
+                        >
+                            Register for this Campaign
+                        </button>
+                    }
+                    {checkCampaignRegisted &&
+                        <button className={cx('campaign-agenda-btn', 'campaign-agenda-btn-register')}
+                        >
+                            Campain registerd
+                        </button>
+                    }
                 </div>
                 <div className={cx('campaign-agenda-infor')}>
                     {areaList?.length > 0 &&
@@ -61,7 +84,9 @@ function CampaignAgeda() {
                                                             {item?.sessions.length > 0 &&
                                                                 item?.sessions.map((session, index) =>
                                                                     <span key={index}
-                                                                        className={cx('campaign-agenda-times-item')}
+                                                                        className={cx('campaign-agenda-times-item', {
+                                                                            'active': session?.type === inforCampaignIfRegisted?.ticketType
+                                                                        })}
                                                                     >
                                                                         {session.time}
                                                                     </span>
@@ -81,6 +106,8 @@ function CampaignAgeda() {
                 <VaccineRegistration ref={campaignRegisterRef}
                     tickets={campaignState?.tickets}
                     services={campaignState?.services}
+                    name={campaignState?.name}
+                    id={campaignState?.id}
                 />
             </div>
         </div>
