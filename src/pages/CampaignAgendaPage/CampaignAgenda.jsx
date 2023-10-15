@@ -58,7 +58,7 @@ function CampaignAgeda() {
                     {checkCampaignRegisted &&
                         <button className={cx('campaign-agenda-btn', 'campaign-agenda-btn-register')}
                         >
-                            Campain registerd
+                            Campain registered
                         </button>
                     }
                 </div>
