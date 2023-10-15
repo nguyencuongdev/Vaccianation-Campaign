@@ -1,7 +1,6 @@
 import { routers } from '~/configs';
-import { HomePage, CampaignAgendaPage } from '../pages';
+import { HomePage, CampaignAgendaPage, DetailSessionCampaignPage } from '../pages';
 import { DefaultLayout } from '~/layouts';
-import { VaccineRegistration } from '~/components/VaccineRegistration';
 
 const router_public = [
     {
@@ -16,7 +15,7 @@ const router_public = [
     },
     {
         path: routers.sessionDetail,
-        component: VaccineRegistration,
+        component: DetailSessionCampaignPage,
     },
     // {
     //     path: routers.login,

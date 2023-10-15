@@ -1,0 +1,30 @@
+.detail-session-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.detail-session--title-text {
+    font-size: 3.2rem;
+    color: var(--primary-color);
+}
+
+.detail-session-type {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.detail-session-des {
+    font-size: 1.6rem;
+    text-align: justify;
+}
+
+.detail-session-const,
+.detail-session-timeEnd,
+.detail-session-timeStart,
+.detail-session-vaccinator {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}

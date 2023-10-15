@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import classnames from 'classnames/bind';
 import styles from './CampaignAgendaPage.module.scss';
 import { CampaignSevice } from '~/services';
@@ -36,7 +37,7 @@ function CampaignAgeda() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [campaignId]);
 
-
+    console.log(pathName);
     const campaignRegisterRef = useRef(null);
     const handleShowFormCampaignRegistration = () => campaignRegisterRef.current.showFormRegistration();
 
@@ -88,7 +89,11 @@ function CampaignAgeda() {
                                                                             'active': session?.type === inforCampaignIfRegisted?.ticketType
                                                                         })}
                                                                     >
-                                                                        {session.time}
+                                                                        <Link
+                                                                            to={pathName.join('/') + '/' + item?.id + '/' + session?.id}
+                                                                        >
+                                                                            {session.time}
+                                                                        </Link>
                                                                     </span>
                                                                 )
                                                             }
@@ -110,7 +115,7 @@ function CampaignAgeda() {
                     id={campaignState?.id}
                 />
             </div>
-        </div>
+        </div >
     );
 }
 

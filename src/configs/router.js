@@ -1,7 +1,7 @@
 const routers = {
     home: '/',
     campaignAgenda: '/campaign/:id',
-    sessionDetail: '/campaign/:id/:session',
+    sessionDetail: '/campaign/:id/:place/:session',
     login: '/login',
     signup: '/signup',
 }
