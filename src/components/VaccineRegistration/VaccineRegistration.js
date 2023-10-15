@@ -34,7 +34,7 @@ const VaccineRegistration = forwardRef(
                 elementParrent = elementParrent.parentElement;
 
             const type = elementParrent.querySelector(`.${cx('ticket-title-name')}`).innerText;
-            const price = +elementParrent.querySelector(`.${cx('ticket-price')}`).innerText;
+            const price = +elementParrent.querySelector('#ticket-price').innerText;
             setTicketType(type);
             setTotalRootCostValue(price);
             setTotalCostValue(addServiceCostValue + price);
@@ -99,7 +99,7 @@ const VaccineRegistration = forwardRef(
                                         />
                                         <h4 className={cx('ticket-title-name')}>{ticket?.type}</h4>
                                     </div>
-                                    <span className={cx('ticket-price')}>{ticket?.price}</span>
+                                    <span className={cx('ticket-price')} id="ticket-price">{ticket?.price}</span>
                                 </div>
                             )
                         }
