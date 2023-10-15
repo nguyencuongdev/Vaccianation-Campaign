@@ -27,17 +27,19 @@ function CampaignAgeda() {
 
     useEffect(() => {
         const getCampaignInforIfRegisted = async (id) => {
-            const data = await CampaignSevice.getCampaignUserRegistedService('/campainsUserRegisted/' + id);
-            if (data) {
-                setCheckCampaignRegisted(true);
-                setInforCampaignIfRegisted(data);
+            try {
+                const data = await CampaignSevice.getCampaignUserRegistedService('/campainsUserRegisted/' + id);
+                if (data) {
+                    setCheckCampaignRegisted(true);
+                    setInforCampaignIfRegisted(data);
+                }
             }
+            catch (e) { }
         }
         getCampaignInforIfRegisted(campaignId);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [campaignId]);
 
-    console.log(pathName);
     const campaignRegisterRef = useRef(null);
     const handleShowFormCampaignRegistration = () => campaignRegisterRef.current.showFormRegistration();
 
@@ -90,6 +92,7 @@ function CampaignAgeda() {
                                                                         })}
                                                                     >
                                                                         <Link
+                                                                            className={cx('campaign-agenda-session-link')}
                                                                             to={pathName.join('/') + '/' + item?.id + '/' + session?.id}
                                                                         >
                                                                             {session.time}

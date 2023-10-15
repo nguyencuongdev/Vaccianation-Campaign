@@ -1,9 +1,13 @@
 .campaign-item {
     border: 1px solid var(--primary-color);
-    padding: 20px;
     border-radius: 4px;
     margin-top: 24px;
     cursor: pointer;
+}
+
+.campaign-link {
+    display: block;
+    padding: 20px;
 }
 
 .campaign-link {

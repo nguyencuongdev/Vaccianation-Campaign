@@ -11,7 +11,6 @@ function DetailSessionCampaignPage() {
     let campaignId = pathName[2];
     let placeId = pathName[3];
     let sessionId = pathName[4];
-    console.log(campaignId + ' ' + placeId + ' ' + sessionId);
 
     useEffect(() => {
         //call api lên sever để lấy thông tin chi tiết của session theo id session, id place, id campaign

@@ -335,6 +335,212 @@
           "type": "Hotel Package"
         }
       ]
+    },
+    {
+      "id": 3,
+      "name": "Vaccination Compaign in Hai Phong Statudium",
+      "organizer": "ABC",
+      "startDate": "21/7/2021",
+      "areas": [
+        {
+          "id": 1,
+          "name": "South",
+          "places": [
+            {
+              "id": 1,
+              "name": "Line 1",
+              "sessions": [
+                {
+                  "id": 1,
+                  "type": "Normal Ticket",
+                  "description": " In our fast-changing world traditional forms of education are becoming outdated. We need to redesign our edcucation systems. What are approaches to learning work in this new world?",
+                  "time": "8h-9h30",
+                  "vaccinator": "Pavel Luksha",
+                  "timeEnd": "90h30"
+                },
+                {
+                  "id": 2,
+                  "type": "Early Bird",
+                  "description": " In our fast-changing world traditional forms of education are becoming outdated. We need to redesign our edcucation systems. What are approaches to learning work in this new world?",
+                  "time": "10h-11h",
+                  "vaccinator": "Pavel Luksha",
+                  "timeEnd": "90h30"
+                },
+                {
+                  "id": 3,
+                  "type": "Hotel Package",
+                  "description": " In our fast-changing world traditional forms of education are becoming outdated. We need to redesign our edcucation systems. What are approaches to learning work in this new world?",
+                  "time": "11h30-15h30",
+                  "vaccinator": "Pavel Luksha",
+                  "timeEnd": "90h30"
+                },
+                {
+                  "id": 4,
+                  "type": "Normal Ticket",
+                  "description": " In our fast-changing world traditional forms of education are becoming outdated. We need to redesign our edcucation systems. What are approaches to learning work in this new world?",
+                  "time": "15h30-16h30",
+                  "vaccinator": "Pavel Luksha",
+                  "timeEnd": "90h30"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "North",
+          "places": [
+            {
+              "id": 1,
+              "name": "Line 1",
+              "sessions": [
+                {
+                  "id": 1,
+                  "type": "Normal Ticket",
+                  "description": " In our fast-changing world traditional forms of education are becoming outdated. We need to redesign our edcucation systems. What are approaches to learning work in this new world?",
+                  "time": "8h-9h30",
+                  "vaccinator": "Pavel Luksha",
+                  "timeEnd": "90h30"
+                },
+                {
+                  "id": 2,
+                  "type": "Early Bird",
+                  "description": " In our fast-changing world traditional forms of education are becoming outdated. We need to redesign our edcucation systems. What are approaches to learning work in this new world?",
+                  "time": "10h-11h",
+                  "vaccinator": "Pavel Luksha",
+                  "timeEnd": "90h30"
+                },
+                {
+                  "id": 3,
+                  "type": "Hotel Package",
+                  "description": " In our fast-changing world traditional forms of education are becoming outdated. We need to redesign our edcucation systems. What are approaches to learning work in this new world?",
+                  "time": "11h30-15h30",
+                  "vaccinator": "Pavel Luksha",
+                  "timeEnd": "90h30"
+                },
+                {
+                  "id": 4,
+                  "type": "Normal Ticket",
+                  "description": " In our fast-changing world traditional forms of education are becoming outdated. We need to redesign our edcucation systems. What are approaches to learning work in this new world?",
+                  "time": "15h30-16h30",
+                  "vaccinator": "Pavel Luksha",
+                  "timeEnd": "90h30"
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "name": "Line 2",
+              "sessions": [
+                {
+                  "id": 1,
+                  "type": "Normal Ticket",
+                  "description": " In our fast-changing world traditional forms of education are becoming outdated. We need to redesign our edcucation systems. What are approaches to learning work in this new world?",
+                  "time": "8h-9h30",
+                  "vaccinator": "Pavel Luksha",
+                  "timeEnd": "90h30"
+                },
+                {
+                  "id": 2,
+                  "type": "Early Bird",
+                  "description": " In our fast-changing world traditional forms of education are becoming outdated. We need to redesign our edcucation systems. What are approaches to learning work in this new world?",
+                  "time": "10h-11h",
+                  "vaccinator": "Pavel Luksha",
+                  "timeEnd": "90h30"
+                },
+                {
+                  "id": 3,
+                  "type": "Hotel Package",
+                  "description": " In our fast-changing world traditional forms of education are becoming outdated. We need to redesign our edcucation systems. What are approaches to learning work in this new world?",
+                  "time": "11h30-15h30",
+                  "vaccinator": "Pavel Luksha",
+                  "timeEnd": "90h30"
+                },
+                {
+                  "id": 4,
+                  "type": "Normal Ticket",
+                  "description": " In our fast-changing world traditional forms of education are becoming outdated. We need to redesign our edcucation systems. What are approaches to learning work in this new world?",
+                  "time": "15h30-16h30",
+                  "vaccinator": "Pavel Luksha",
+                  "timeEnd": "90h30"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "name": "Line 3",
+              "sessions": [
+                {
+                  "id": 1,
+                  "type": "Normal Ticket",
+                  "description": " In our fast-changing world traditional forms of education are becoming outdated. We need to redesign our edcucation systems. What are approaches to learning work in this new world?",
+                  "time": "8h-9h30",
+                  "vaccinator": "Pavel Luksha",
+                  "timeEnd": "90h30"
+                },
+                {
+                  "id": 2,
+                  "type": "Early Bird",
+                  "description": " In our fast-changing world traditional forms of education are becoming outdated. We need to redesign our edcucation systems. What are approaches to learning work in this new world?",
+                  "time": "10h-11h",
+                  "vaccinator": "Pavel Luksha",
+                  "timeEnd": "90h30"
+                },
+                {
+                  "id": 3,
+                  "type": "Hotel Package",
+                  "description": " In our fast-changing world traditional forms of education are becoming outdated. We need to redesign our edcucation systems. What are approaches to learning work in this new world?",
+                  "time": "11h30-15h30",
+                  "vaccinator": "Pavel Luksha",
+                  "timeEnd": "90h30"
+                },
+                {
+                  "id": 4,
+                  "type": "Normal Ticket",
+                  "description": " In our fast-changing world traditional forms of education are becoming outdated. We need to redesign our edcucation systems. What are approaches to learning work in this new world?",
+                  "time": "15h30-16h30",
+                  "vaccinator": "Pavel Luksha",
+                  "timeEnd": "90h30"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "services": [
+        {
+          "id": 1,
+          "name": "Designiing shills path",
+          "price": 20
+        },
+        {
+          "id": 2,
+          "name": "Education ecosystem",
+          "price": 10
+        },
+        {
+          "id": 2,
+          "name": "Trainng and movat",
+          "price": 30
+        }
+      ],
+      "tickets": [
+        {
+          "id": 1,
+          "price": 210,
+          "type": "Normal Ticket"
+        },
+        {
+          "id": 2,
+          "price": 230,
+          "type": "Early Bird"
+        },
+        {
+          "id": 3,
+          "price": 300,
+          "type": "Hotel Package"
+        }
+      ]
     }
   ],
   "campainsUserRegisted": [
